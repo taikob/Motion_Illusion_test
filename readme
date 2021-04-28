@@ -1,0 +1,41 @@
+Motion Illusion test
+
+Taisuke Kobayashi, 2021
+
+Overview
+
+This software conducts Psychological experiment (two-alternative forced judgment).
+
+Test environment
+
+OS: MacOS 11.2.3 Python: 3.8
+
+Requirements
+
+OpenGL.GL
+cv2
+math
+glfw
+time
+sys
+os
+shutil
+argparse
+numpy
+csv
+random
+
+First, check and set a config.py which is written experiment condition (stimuli path, display parameter, etc.).
+Then, execute the following command for experiment.
+
+$ python Motion_Illusion_test/main.py
+
+In the experiment, enter A or L to answer whether the stimulus has rotated counter-clockwise or clockwise, and enter space key to show next stimulus.
+
+When the experiment is finished, the software save a directory including a result txt.
+In the result txt, each row data means stimulus type(0: original or 1: mirror), rotation velocity(degree/s) and answer(0: CW, 1: CCW).
+
+If you want to stop the experiment in the middle, you can enter Q to save directory including a midway result and experiment file which is used to continue the experiment.
+To continue the stoped experiment, execute the following command.
+
+$ python Motion_Illusion_test/main.py -p <directory name>
